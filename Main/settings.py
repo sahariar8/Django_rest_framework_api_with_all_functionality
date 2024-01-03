@@ -114,3 +114,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_RATES':{
+        'anon':'2/day',
+        'user':'5/hour',
+    } 
+}
